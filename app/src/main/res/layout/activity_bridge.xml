@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:eegeo="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".bridge.BridgeActivity">
+
+    <com.eegeo.mapapi.MapView
+        android:id="@+id/mapViewBridge"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        eegeo:camera_target_latitude="37.8199"
+        eegeo:camera_target_longitude="-122.4783"
+        eegeo:camera_zoom="16"
+        eegeo:layout_constraintBottom_toBottomOf="parent"
+        eegeo:layout_constraintEnd_toEndOf="parent"
+        eegeo:layout_constraintStart_toStartOf="parent"
+        eegeo:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

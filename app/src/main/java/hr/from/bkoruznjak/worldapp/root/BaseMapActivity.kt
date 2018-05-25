@@ -5,4 +5,6 @@ interface BaseMapActivity {
     fun getTitleResource(): Int
 
     fun getLayout(): Int
+
+    fun setupMap()
 }
