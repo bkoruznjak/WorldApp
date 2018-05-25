@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">World App</string>
+    <string name="text_go_to_ggbridge">Check out the Golden Gate Bridge</string>
+    <string name="text_go_to_academy">Check out the California Academy of Sciences</string>
+</resources>
