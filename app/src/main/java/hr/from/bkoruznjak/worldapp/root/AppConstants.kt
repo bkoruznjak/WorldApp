@@ -1,4 +1,4 @@
-package hr.from.bkoruznjak.worldapp.constants
+package hr.from.bkoruznjak.worldapp.root
 
 object AppConstants {
 

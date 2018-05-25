@@ -10,8 +10,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-
     <application
+        android:name=".root.WorldApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -25,6 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".academy.AcademyActivity"
+            android:parentActivityName=".root.MainActivity" />
+        <activity
+            android:name=".bridge.BridgeActivity"
+            android:parentActivityName=".root.MainActivity" />
     </application>
 
 </manifest>

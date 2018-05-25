@@ -1,12 +1,15 @@
 package hr.from.bkoruznjak.worldapp.root
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import com.bumptech.glide.Glide
 import hr.from.bkoruznjak.worldapp.R
-import hr.from.bkoruznjak.worldapp.constants.AppConstants.DESTINATION_CALIFORNIA_ACADEMY_OF_SCIENCES
-import hr.from.bkoruznjak.worldapp.constants.AppConstants.DESTINATION_GOLDEN_GATE_BRIDGE
+import hr.from.bkoruznjak.worldapp.academy.AcademyActivity
+import hr.from.bkoruznjak.worldapp.bridge.BridgeActivity
+import hr.from.bkoruznjak.worldapp.root.AppConstants.DESTINATION_CALIFORNIA_ACADEMY_OF_SCIENCES
+import hr.from.bkoruznjak.worldapp.root.AppConstants.DESTINATION_GOLDEN_GATE_BRIDGE
 import kotlinx.android.synthetic.main.card_view_cali_academy.*
 import kotlinx.android.synthetic.main.layout_card_view_golden_gate.*
 import java.lang.IllegalArgumentException
@@ -36,7 +39,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    private fun goToDestination(destinatioN_GOLDEN_GATE_BRIDGE: Int) {
-
+    private fun goToDestination(destionation: Int) {
+        val goToDestinationIntent = Intent(this, when (destionation) {
+            DESTINATION_CALIFORNIA_ACADEMY_OF_SCIENCES -> AcademyActivity::class.java
+            DESTINATION_GOLDEN_GATE_BRIDGE -> BridgeActivity::class.java
+            else -> throw IllegalArgumentException("Invalid intent parameter")
+        })
+        startActivity(goToDestinationIntent)
     }
 }
