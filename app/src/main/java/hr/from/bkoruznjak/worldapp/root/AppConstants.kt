@@ -15,6 +15,7 @@ object AppConstants {
     const val ACADEMY_MARKER_TEXT = "One small espresso thx"
     const val ACADEMY_MARKER_ICON = "coffee"
 
+    const val BRIDGE_ANIMATION_DURATION_IN_MILLIS = 60000L
     const val BRIDGE_MARKER_START_LAT = 37.82764578642217
     const val BRIDGE_MARKER_END_LAT = 37.80961929290765
     const val BRIDGE_MARKER_START_LONG = -122.479315852908
