@@ -33,7 +33,7 @@ class BridgeActivity : AppCompatActivity(), BaseMapActivity {
     }
 
     override fun setupMap() {
-        mapViewBridge.getMapAsync { _ -> println("bridge map is loaded") }
+        mapViewBridge.getMapAsync { map -> println("bridge map is loaded") }
     }
 
     override fun getTitleResource(): Int = R.string.title_bridge
